@@ -50,7 +50,38 @@ export default function Catalog() {
     return matchForCategory && matchForPrice;
   });
 
-  
+  function addingToCart(product) {
+    if (product.stock === 0) return;
+    setCart((e) => ({ ...e, [product.id]: (e[product.id] || 0) + 1 }));
+    setProducts((e) =>
+      e.map((p) => (p.id === product.id ? { ...p, stock: p.stock - 1 } : p))
+    );
+  }
+
+  function handleClearCart() {
+    setProducts((e) =>
+      e.map((p) => {
+        let qty = cart[p.id] || 0;
+        return { ...p, stock: p.stock + qty };
+      })
+    );
+    setCart({});
+  }
+
+  function decreasingEvent(id) {
+    setCart((e) => {
+      let qty = e[id];
+      if (!qty) return e;
+      let next = { ...e, [id]: qty - 1 };
+      if (next[id] <= 0) delete next[id];
+      return next;
+    });
+    setProducts((e) =>
+      e.map((p) => (p.id === id ? { ...p, stock: p.stock + 1 } : p))
+    );
+  }
+
+
 
   
 
