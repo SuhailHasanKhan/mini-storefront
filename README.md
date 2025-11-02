@@ -19,28 +19,29 @@ This project demonstrates key React skills: **state**, **props**, **effects**, *
 
 3. **Add files**
 Place the following structure in your project:
-```bash
-src/app/
-  page.jsx
-  api/products/route.js
-  components/
-    Catalog.jsx
-    ProductList.jsx
-    ProductCard.jsx
-    CategoryFilter.jsx
-    PriceFilter.jsx
-    CartSummary.jsx
-    StatusMessage.jsx
+    ```bash
+    src/app/
+      page.jsx
+      api/products/route.js
+      components/
+        Catalog.jsx
+        ProductList.jsx
+        ProductCard.jsx
+        CategoryFilter.jsx
+        PriceFilter.jsx
+        CartSummary.jsx
+        StatusMessage.jsx
 
 4. **Run the app**
-Visit ➜ http://localhost:3000
+    ```bash
+    Visit ➜ http://localhost:3000
 
 
 ✅ Rubric Checklist
-
-Project Setup & Structure	    Correct Next.js + Tailwind setup and folder layout
-Components + JSX + Keys	        Reusable components, proper JSX, key={product.id} in lists
-Props + Lifting State     	    Shared state in Catalog.jsx passed via props to children
-State + Controlled Inputs	    useState for filters/cart; controlled <select> + <input>
-Effects + Cleanup	            useEffect for fetching and stock updates; clearInterval cleanup
-UX + Conditional Rendering	    StatusMessage handles loading, error, and empty states
+    ```bash
+    Project Setup & Structure	    Correct Next.js + Tailwind setup and folder layout
+    Components + JSX + Keys	        Reusable components, proper JSX, key={product.id} in lists
+    Props + Lifting State     	    Shared state in Catalog.jsx passed via props to children
+    State + Controlled Inputs	    useState for filters/cart; controlled <select> + <input>
+    Effects + Cleanup	            useEffect for fetching and stock updates; clearInterval cleanup
+    UX + Conditional Rendering	    StatusMessage handles loading, error, and empty states
