@@ -19,7 +19,7 @@ This project demonstrates key React skills: **state**, **props**, **effects**, *
 
 3. **Add files**
 Place the following structure in your project:
-
+```bash
 src/app/
   page.jsx
   api/products/route.js
