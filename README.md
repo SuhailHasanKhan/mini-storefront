@@ -13,9 +13,9 @@ This project demonstrates key React skills: **state**, **props**, **effects**, *
    npx create-next-app@latest mini-storefront
 
 2. **Install & run**
-
-cd mini-storefront
-npm run dev
+    ```bash
+    cd mini-storefront
+    npm run dev
 
 3. **Add files**
 Place the following structure in your project:
