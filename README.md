@@ -37,7 +37,7 @@ Place the following structure in your project:
     Visit ➜ http://localhost:3000
 
 
-✅ Rubric Checklist
+ 5. **Rubric Checklist**
     ```bash
     Project Setup & Structure	    Correct Next.js + Tailwind setup and folder layout
     Components + JSX + Keys	        Reusable components, proper JSX, key={product.id} in lists
