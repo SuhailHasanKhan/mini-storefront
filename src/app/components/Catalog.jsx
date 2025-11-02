@@ -58,7 +58,7 @@ export default function Catalog() {
     );
   }
 
-  function handleClearCart() {
+  function clearingCart() {
     setProducts((e) =>
       e.map((p) => {
         let qty = cart[p.id] || 0;
@@ -81,11 +81,23 @@ export default function Catalog() {
     );
   }
 
+  return (
+    <div className="grid gap-6 lg:grid-cols-3">
+        <div className="lg:col-span-2">
+            <div className="flex gap-4 flex-wrap mb-4">
+                <CategoryFilter value={selectedCategory} onChange={setSelectedCategory} products={products}/>
+                <PriceFilter value={maxPrice} onChange={setMaxPrice} />
+            </div>
 
+            <StatusMessage loading={loading} ifError={error} ifEmpty={!loading && filteredProducts.length === 0}/>
+            {!loading && !error && (
+                <ProductList products={filteredProducts} onAtc={addingToCart} />
+            )}
+    
+        </div>
 
-  
-
-
-
+        <CartSummary cart={cart} products={products} forDecrease={decreasingEvent} forClear={clearingCart}/>
+    </div>
+  );
 
 }

@@ -20,7 +20,7 @@ export default function ProductCard({ product, onAtc }) {
             <button onClick={() => onAtc(product)}
                     disabled={ifOut}
                     className={`w-full py-2 text-sm rounded-md ${ifOut ? 'bg-slate-200 text-slate-500 cursor-not-allowed' : 'bg-slate-900 text-white'}`}>
-                    {fsOut ? 'Unavailable' : 'Add to cart'}
+                    {ifOut ? 'Unavailable' : 'Add to cart'}
             </button>
         </div>
     );
